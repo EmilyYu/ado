@@ -36,8 +36,18 @@ public class FWUser {
 	private String password;
 	
 
+	private Boolean locked;
 	
 	
+	
+	public Boolean getLocked() {
+		return locked;
+	}
+
+	public void setLocked(Boolean locked) {
+		this.locked = locked;
+	}
+
 	public String getPassword() {
 		return password;
 	}
