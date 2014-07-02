@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="dbo"
+  name="ado"
   id="myeclipse.1402908764475"
   context-root="/dbo"
   j2ee-spec="1.4"
-  archive="dbo.war">
+  archive="ado.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>

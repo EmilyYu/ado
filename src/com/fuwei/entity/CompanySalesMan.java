@@ -24,6 +24,20 @@ public class CompanySalesMan {
 	private Date updated_at;// 最近更新时间
 	
 	
+	private FWUser created_user;//创建用户
+	
+
+	@ManyToOne(targetEntity=FWUser.class)
+	@JoinColumn(name="created_user")
+	public FWUser getCreated_user() {
+		return created_user;
+	}
+
+	public void setCreated_user(FWUser created_user) {
+		this.created_user = created_user;
+	}
+	
+	
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

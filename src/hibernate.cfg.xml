@@ -29,6 +29,8 @@
 	<property name="hibernate.c3p0.testConnectionOnCheckout">true</property>  
 	<!-- 指定数据库方言 -->
 	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+	<mapping class="com.fuwei.entity.Role"/>
+	<mapping class="com.fuwei.entity.FWUser"/>
 	<mapping class="com.fuwei.entity.Sample"/>
 	<mapping class="com.fuwei.entity.CompanyPrice"/>
 	<mapping class="com.fuwei.entity.Company"/>
@@ -38,11 +40,11 @@
 	<mapping class="com.fuwei.entity.QuotationList"/>
 	<mapping class="com.fuwei.entity.GongXu"/>
 	<mapping class="com.fuwei.entity.UnPricedSample"/>
-	<mapping class="com.fuwei.entity.FWUser"/>
+	
 	<mapping class="com.fuwei.entity.FWOrder"/>
 	<mapping class="com.fuwei.entity.SamplePrice"/>
 	<mapping class="com.fuwei.entity.OrderStatus"/>
-	<mapping class="com.fuwei.entity.Role"/>
+	
 	<mapping class="com.fuwei.entity.Module"/>
 	<mapping class="com.fuwei.entity.Role_Module"/>
 </session-factory>

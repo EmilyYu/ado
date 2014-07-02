@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 
 /*公司类*/
@@ -19,6 +21,21 @@ public class Role {
 	private String decription;//角色描述
 	private Date created_at;// 创建时间
 	private Date updated_at;// 最近更新时间
+	
+	@ManyToOne(targetEntity=FWUser.class)
+	@JoinColumn(name="created_user")
+	private FWUser created_user;//创建用户
+	
+
+	
+	public FWUser getCreated_user() {
+		return created_user;
+	}
+
+	public void setCreated_user(FWUser created_user) {
+		this.created_user = created_user;
+	}
+	
 	public int getId() {
 		return id;
 	}

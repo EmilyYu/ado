@@ -2,7 +2,6 @@ package com.fuwei.entity;
 
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +11,7 @@ import javax.persistence.ManyToOne;
 
 @Entity(name="tb_user")
 public class FWUser {
+	
 	private int id;
 	private String username ; //用户名（登录时使用）
 	private String name;//姓名,一般是中文名称
@@ -34,6 +34,8 @@ public class FWUser {
 	private String qq;//QQ
 	
 	private String password;
+	
+
 	
 	
 	public String getPassword() {

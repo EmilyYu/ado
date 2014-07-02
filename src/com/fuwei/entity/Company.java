@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 
 /*公司类*/
@@ -35,6 +37,30 @@ public class Company {
 	private String shortname;// 公司简称
 
 	private String fullname;// 公司全称
+	
+	private String help_code;//拼音简称
+	
+	
+	@ManyToOne(targetEntity=FWUser.class)
+	@JoinColumn(name="created_user")
+	private FWUser created_user;//创建用户
+	
+	public FWUser getCreated_user() {
+		return created_user;
+	}
+
+	public void setCreated_user(FWUser created_user) {
+		this.created_user = created_user;
+	}
+	
+	
+	public String getHelp_code() {
+		return help_code;
+	}
+	
+	public void setHelp_code(String help_code) {
+		this.help_code = help_code;
+	}
 
 	public int getId() {
 		return id;
@@ -115,5 +141,8 @@ public class Company {
 	public void setFullname(String fullname) {
 		this.fullname = fullname;
 	}
-
+	
+	
+	
+	
 }

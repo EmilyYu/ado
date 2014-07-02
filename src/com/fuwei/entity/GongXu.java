@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity(name="tb_gongxu")
 public class GongXu {
@@ -13,6 +15,20 @@ public class GongXu {
 	private String name;
 	private Date created_at;// 创建时间
 	private Date updated_at;// 最近更新时间
+	
+	private FWUser created_user;//创建用户
+	
+
+	@ManyToOne(targetEntity=FWUser.class)
+	@JoinColumn(name="created_user")
+	public FWUser getCreated_user() {
+		return created_user;
+	}
+
+	public void setCreated_user(FWUser created_user) {
+		this.created_user = created_user;
+	}
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	public int getId() {
